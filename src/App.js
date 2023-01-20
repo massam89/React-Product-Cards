@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ProductCard from "./components/ProductCard/ProductCard";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
+const App = () => {
+  const products = [
+    { id: 1, title: "Socks", price: 39.99, src: "./socks.jpg" },
+    { id: 2, title: "Shoes", price: 88.45, src: "./shoe.jpg" },
+    { id: 3, title: "Shorts", price: 25.99, src: "./shorts.jpg" },
+    { id: 4, title: "Hat", price: 19, src: "./hat.jpg" },
+  ];
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="cards">
+        <ProductCard {...products[0]}></ProductCard>
+        <ProductCard {...products[1]}></ProductCard>
+        <ProductCard {...products[2]}></ProductCard>
+        <ProductCard {...products[3]}></ProductCard>
+      </div>
+      <Footer></Footer>
+    </>
   );
-}
+};
 
 export default App;
