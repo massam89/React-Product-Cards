@@ -6,14 +6,14 @@
 }
 
 .container {
-  width: 15rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  flex-basis: 15rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 4px 0 10px -4px rgba(190, 190, 190, 0.8),
     -4px 0 10px -4px rgba(190, 190, 190, 0.8);
   position: relative;
@@ -38,6 +38,7 @@
   background-color: #ccc;
   color: #111;
   border-top: solid 1px #ccc;
+  transition: all 0.3s;
 }
 .info p {
   text-align: center;
@@ -53,4 +54,6 @@
 }
 h5 {
   margin-bottom: 5px;
+  color: #777;
+  font-size: 18px;
 }
