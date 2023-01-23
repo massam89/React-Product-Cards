@@ -14,12 +14,10 @@ const App = () => {
   return (
     <>
       <div className="cards">
-        <ProductCard {...products[0]}></ProductCard>
-        <ProductCard {...products[1]}></ProductCard>
-        <ProductCard {...products[2]}></ProductCard>
-        <ProductCard {...products[3]}></ProductCard>
+        {products.map(product => <ProductCard {...product}></ProductCard>)}
       </div>
-      <Footer></Footer>
+
+      <Footer />
     </>
   );
 };
